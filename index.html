@@ -1,164 +1,140 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Canberk Gelir - Klinik Psikolog, Psikoterapist</title>
-  <style>
-    body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #222;
-      background: #fafafa;
-      line-height: 1.6;
-    }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Canberk Gelir - Klinik Psikolog, Psikoterapist</title>
+<style>
+ body {
+  font-family: Arial, sans-serif;
+  background:#fafafa;
+  margin:0;
+  padding:0;
+  color:#222;
+ }
+ .container {
+  max-width:800px;
+  margin:auto;
+  padding:25px;
+  text-align:center;
+ }
+ img.profile {
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:20px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+ }
+ h1 { font-size:24px; margin-bottom:8px; }
+ h2 { font-size:18px; color:#555; margin-bottom:22px; }
+ h3 { text-align:left; margin:35px 0 10px; font-size:20px; }
+ p { text-align:left; line-height:1.6; margin-bottom:12px; }
 
-    .container {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
+ /* Randevu Butonu */
+ .btn {
+  display:inline-block;
+  background:#25D366;
+  color:#fff;
+  padding:14px 26px;
+  border-radius:26px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:25px;
+  font-size:17px;
+ }
 
-    img.profile {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+ /* Footer ikonlar */
+ .icons {
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  margin-top:30px;
+ }
+ .icons a svg {
+  width:30px;
+  height:30px;
+  fill:#333;
+  transition:.2s;
+ }
+ .icons a:hover svg {
+  fill:#0d9488;
+  transform:scale(1.15);
+ }
 
-    h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
+ /* Sağ sabit WhatsApp balonu */
+ .whatsapp-float {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 4px 10px rgba(0,0,0,.3);
+  text-decoration:none;
+  z-index:999;
+ }
+ .whatsapp-float svg {
+  width:36px;
+  height:36px;
+  fill:white;
+ }
 
-    h2 {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 25px;
-    }
-
-    h3 {
-      font-size: 20px;
-      text-align: left;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      color: #111;
-    }
-
-    p {
-      text-align: left;
-      color: #333;
-      margin-bottom: 15px;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .social-icons a svg {
-      width: 28px;
-      height: 28px;
-      fill: #333;
-      transition: 0.2s ease;
-    }
-
-    .social-icons a:hover svg {
-      fill: #0d9488;
-      transform: scale(1.15);
-    }
-
-    .whatsapp-button {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease;
-      z-index: 999;
-    }
-
-    .whatsapp-button:hover {
-      transform: scale(1.1);
-    }
-
-    .whatsapp-button svg {
-      width: 30px;
-      height: 30px;
-      fill: white;
-    }
-
-    @media (max-width: 600px) {
-      img.profile {
-        width: 130px;
-        height: 130px;
-      }
-      h1 {
-        font-size: 20px;
-      }
-      h2 {
-        font-size: 16px;
-      }
-    }
-  </style>
+ @media(max-width:600px){
+   img.profile{width:140px;height:140px;}
+   h1{font-size:20px;}
+   h2{font-size:16px;}
+ }
+</style>
 </head>
-<!-- Sabit WhatsApp Butonu -->
-<a href="https://wa.me/905555555555" 
-   target="_blank" 
-   style="
-     position: fixed;
-     bottom: 20px;
-     right: 20px;
-     background-color: #25D366;
-     color: white;
-     border-radius: 50%;
-     width: 60px;
-     height: 60px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     font-size: 28px;
-     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-     text-decoration: none;
-     z-index: 1000;">
-  <i class="fab fa-whatsapp"></i>
+<body>
+
+<div class="container">
+
+<img src="fotoğraf.JPG" class="profile"/>
+
+<h1>Canberk Gelir - Klinik Psikolog, Psikoterapist</h1>
+<h2>Yüz yüze / Online Bireysel Psikoterapi</h2>
+
+<h3>Özgeçmiş</h3>
+
+<p>İzmir Ekonomi Üniversitesi Psikoloji bölümünde lisans eğitimini tamamladıktan sonra Acıbadem Üniversitesi Klinik Psikoloji Yüksek Lisans programını ‘‘Romantik ilişki doyumunun, psikolojik uyum (depresyon, anksiyete ve stres belirtileri), algılanan ebeveynler arası ilişki ve çatışma çözme stilleri açısından incelenmesi’’ adlı tez çalışmasıyla tamamlamıştır.</p>
+
+<p>Lisans eğitimi devam ederken Ege Üniversitesi Ruh Sağlığı ve Hastalıkları Anabilim Dalı ve Ege Üniversitesi Madde Bağımlılığı, Toksikoloji ve İlaç Bilimleri Enstitüsünde 2 ay, yüksek lisans eğitimi devam ederken Bakırköy Ruh ve Sinir Hastalıkları Hastanesinde psikolojik test laboratuvarı, AMATEM, çocuk ve kadın birimlerinde 5 ay staj yapmıştır.</p>
+
+<p>Dinamik Terapi ve Bilişsel Davranışçı Terapi süpervizyonu; Dinamik Psikoterapi, Bilişsel Davranışçı Terapi ve Şema Terapi eğitimleri almıştır. Toplumsal Dayanışma İçin Psikologlar Derneği (TODAP) üyesidir.</p>
+
+<p>2020 Eylül tarihinden beri yetişkin danışanlara yönelik psikoterapi seansları gerçekleştirmektedir.</p>
+
+<a class="btn" href="https://wa.me/905411367213" target="_blank">Randevu Al</a>
+
+<div class="icons">
+ <!-- LinkedIn -->
+ <a href="https://www.linkedin.com/in/canberkgelir/" target="_blank">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1a53.8 53.8 0 110-107.6 53.8 53.8 0 010 107.6zM447.9 448h-92.7V306.9c0-33.6-.7-76.8-46.8-76.8-46.9 0-54.1 36.7-54.1 74.6V448H161V148.9h89v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
+ </a>
+
+ <!-- Instagram -->
+ <a href="https://www.instagram.com/klinikpsk.canberkgelir/" target="_blank">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9s-51.3-114.9-114.9-114.9zm146.4-29.1c0 14.9-12.1 27-27 27s-27-12.1-27-27 12.1-27 27-27 27 12.1 27 27zM398.8 80H49.2A49.2 49.2 0 000 129.2v249.6A49.2 49.2 0 0049.2 428h349.6A49.2 49.2 0 00448 378.8V129.2A49.2 49.2 0 00398.8 80z"/></svg>
+ </a>
+
+ <!-- WhatsApp -->
+ <a href="https://wa.me/905411367213" target="_blank">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C340.7 6.8 229.1-27.2 139.8 13c-67.7 29.4-113.2 93.7-113.2 163.5 0 27.1 6.6 54.2 19.3 78.9L0 480l226-47.8c25.3 9.3 51.8 14 78.4 14 91.1 0 171.6-58 200.4-145.6 16.9-53.7 11.5-113.5-23.9-163.5z"/></svg>
+ </a>
+</div>
+
+</div>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/905411367213" class="whatsapp-float" target="_blank">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C340.7 6.8 229.1-27.2 139.8 13c-67.7 29.4-113.2 93.7-113.2 163.5 0 27.1 6.6 54.2 19.3 78.9L0 480l226-47.8c25.3 9.3 51.8 14 78.4 14 91.1 0 171.6-58 200.4-145.6 16.9-53.7 11.5-113.5-23.9-163.5z"/></svg>
 </a>
 
-<body>
-  <div class="container">
-    <img src="fotoğraf.JPG" alt="Canberk Gelir" class="profile" />
-    <h1>Canberk Gelir - Klinik Psikolog, Psikoterapist</h1>
-    <h2>Yüz yüze / Online Bireysel Psikoterapi</h2>
-
-    <h3>Özgeçmiş</h3>
-    <p>
-      İzmir Ekonomi Üniversitesi Psikoloji bölümünde lisans eğitimini tamamladıktan sonra Acıbadem Üniversitesi Klinik Psikoloji Yüksek Lisans programını ‘’Romantik ilişki doyumunun, psikolojik uyum (depresyon, anksiyete ve stres belirtileri), algılanan ebeveynler arası ilişki ve çatışma çözme stilleri açısından incelenmesi’’ adlı tez çalışmasıyla tamamlamıştır.
-    </p>
-    <p>
-      Lisans eğitimi devam ederken Ege Üniversitesi Ruh Sağlığı ve Hastalıkları Anabilim Dalı ve Ege Üniversitesi Madde Bağımlılığı, Toksikoloji ve İlaç Bilimleri Enstitüsünde 2 ay, yüksek lisans eğitimi devam ederken Bakırköy Ruh ve Sinir Hastalıkları Hastanesinde psikolojik test laboratuvarı, AMATEM, çocuk ve kadın birimlerinde 5 ay staj yapmıştır.
-    </p>
-    <p>
-      Dinamik Terapi ve Bilişsel Davranışçı Terapi süpervizyonu; Dinamik Psikoterapi, Bilişsel Davranışçı Terapi ve Şema Terapi eğitimleri almıştır. Toplumsal Dayanışma İçin Psikologlar Derneği (TODAP) üyesidir.
-    </p>
-    <p>
-      2020 Eylül tarihinden beri yetişkin danışanlara yönelik psikoterapi seansları gerçekleştirmektedir.
-    </p>
-
-    <div class="social-icons">
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/canberkgelir/" target="_blank" title="LinkedIn">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zm-46.44-339A53.79 53.79 0 110 55.79a53.79 53.79 0 0153.84 53.21zM447.9 448h-92.68V302.4c0-34.7-12.4-58.4-43.5-58.4-23.7 0-37.8 15.9-44 31.2-2.3 5.6-2.8 13.5-2.8 21.4V448h-92.7s1.2
+</body>
+</html>
