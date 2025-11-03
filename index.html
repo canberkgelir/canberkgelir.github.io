@@ -3,155 +3,146 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Canberk Gelir - Klinik Psikolog, Psikoterapist</title>
+  <title>Canberk Gelir - Klinik Psikolog</title>
+
+  <!-- Font Awesome ikonları -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-pJ+QW4u2z9EibE9ENzAOQxFsm6wq2jzKQuUUm9e6Y5T6mKcM2V6GjI8xK0+1gD8M6RjK8kTx2aO8H9Y6Irw5XQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
     body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background-color: #fafafa;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #f9f9f9;
       color: #222;
       margin: 0;
       padding: 0;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px 80px 20px;
+      max-width: 700px;
+      background: white;
+      margin: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding: 20px;
     }
 
-    .profile-pic {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    .profile {
+      text-align: center;
       margin-bottom: 20px;
     }
 
-    h1 {
-      font-size: 28px;
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ddd;
       margin-bottom: 10px;
     }
 
+    h1 {
+      font-size: 1.8em;
+      margin: 0;
+    }
+
     h2 {
-      font-size: 20px;
-      color: #444;
-      margin-bottom: 25px;
+      font-size: 1.2em;
+      color: #555;
+      margin-top: 5px;
     }
 
-    h3 {
-      font-size: 18px;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    .bio {
+    .section {
       text-align: left;
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 40px;
-      color: #222;
+      margin-top: 20px;
     }
 
-    .randevu {
+    .section h3 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .section p {
+      line-height: 1.6;
+      font-size: 0.95em;
+      color: #333;
+    }
+
+    .button {
       display: inline-block;
-      background-color: #007bff;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .randevu:hover {
-      background-color: #0056b3;
-    }
-
-    footer {
-      margin-top: 40px;
-    }
-
-    .socials {
-      margin-top: 25px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .socials a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background-color: #e9e9e9;
-      text-decoration: none;
-      color: #222;
-      font-size: 20px;
-      transition: all 0.3s ease;
-    }
-
-    .socials a:hover {
-      background-color: #007bff;
-      color: white;
-    }
-
-    .whatsapp {
-      position: fixed;
-      right: 25px;
-      bottom: 25px;
       background-color: #25D366;
       color: white;
-      border: none;
-      border-radius: 50%;
-      padding: 15px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      font-size: 22px;
+      padding: 12px 24px;
+      margin: 20px auto;
+      border-radius: 25px;
       text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      transition: background 0.3s;
     }
 
-    .whatsapp:hover {
-      background-color: #20b858;
+    .button:hover {
+      background-color: #1ebe5a;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .social a {
+      color: #666;
+      font-size: 1.7em;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    .social a:hover {
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.5em; }
+      h2 { font-size: 1em; }
+      .section p { font-size: 0.9em; }
+      .profile img { width: 120px; height: 120px; }
     }
   </style>
-
-  <script src="https://kit.fontawesome.com/2f52e2f8a0.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
-    <img src="fotoğraf.JPG" alt="Canberk Gelir" class="profile-pic" />
-    <h1>Canberk Gelir</h1>
-    <h2>Klinik Psikolog, Psikoterapist</h2>
-    <h3>Yüz yüze / Online Bireysel Psikoterapi</h3>
+    <div class="profile">
+      <img src="fotoğraf.JPG" alt="Canberk Gelir Fotoğrafı" />
+      <h1>Canberk Gelir</h1>
+      <h2>Klinik Psikolog, Psikoterapist</h2>
+      <p>Yüz yüze / Online Bireysel Psikoterapi</p>
+    </div>
 
-    <h3 style="text-align: left;">Özgeçmiş</h3>
-    <p class="bio">
-      İzmir Ekonomi Üniversitesi Psikoloji bölümünde lisans eğitimini tamamladıktan sonra Acıbadem Üniversitesi Klinik Psikoloji Yüksek Lisans programını ‘’Romantik ilişki doyumunun, psikolojik uyum (depresyon, anksiyete ve stres belirtileri), algılanan ebeveynler arası ilişki ve çatışma çözme stilleri açısından incelenmesi’’ adlı tez çalışmasıyla tamamlamıştır. Lisans eğitimi devam ederken Ege Üniversitesi Ruh Sağlığı ve Hastalıkları Anabilim Dalı ve Ege Üniversitesi Madde Bağımlılığı, Toksikoloji ve İlaç Bilimleri Enstitüsünde 2 ay, yüksek lisans eğitimi devam ederken Bakırköy Ruh ve Sinir Hastalıkları Hastanesinde psikolojik test laboratuvarı, AMATEM, çocuk ve kadın birimlerinde 5 ay staj yapmıştır. Dinamik Terapi ve Bilişsel Davranışçı Terapi süpervizyonu; Dinamik Psikoterapi, Bilişsel Davranışçı Terapi ve Şema Terapi eğitimleri almıştır. Toplumsal Dayanışma İçin Psikologlar Derneği (TODAP) üyesidir.<br><br>
-      2020 Eylül tarihinden beri yetişkin danışanlara yönelik psikoterapi seansları gerçekleştirmektedir.
-    </p>
+    <div class="section">
+      <h3>Özgeçmiş</h3>
+      <p>
+        İzmir Ekonomi Üniversitesi Psikoloji bölümünde lisans eğitimini tamamladıktan sonra Acıbadem Üniversitesi Klinik Psikoloji Yüksek Lisans programını ‘’Romantik ilişki doyumunun, psikolojik uyum (depresyon, anksiyete ve stres belirtileri), algılanan ebeveynler arası ilişki ve çatışma çözme stilleri açısından incelenmesi’’ adlı tez çalışmasıyla tamamlamıştır. Lisans eğitimi devam ederken Ege Üniversitesi Ruh Sağlığı ve Hastalıkları Anabilim Dalı ve Ege Üniversitesi Madde Bağımlılığı, Toksikoloji ve İlaç Bilimleri Enstitüsünde 2 ay, yüksek lisans eğitimi devam ederken Bakırköy Ruh ve Sinir Hastalıkları Hastanesinde psikolojik test laboratuvarı, AMATEM, çocuk ve kadın birimlerinde 5 ay staj yapmıştır. Dinamik Terapi ve Bilişsel Davranışçı Terapi süpervizyonu; Dinamik Psikoterapi, Bilişsel Davranışçı Terapi ve Şema Terapi eğitimleri almıştır. Toplumsal Dayanışma İçin Psikologlar Derneği (TODAP) üyesidir.
+      </p>
+      <p>
+        2020 Eylül tarihinden beri yetişkin danışanlara yönelik psikoterapi seansları gerçekleştirmektedir.
+      </p>
+    </div>
 
-    <footer>
-      <a href="https://wa.me/905411367213" class="randevu">Randevu Al</a>
+    <a href="https://wa.me/905411367213" target="_blank" class="button">Randevu Al</a>
 
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/canberkgelir/" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://wa.me/905411367213" target="_blank" title="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://www.instagram.com/klinikpsk.canberkgelir/" target="_blank" title="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-    </footer>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/canberkgelir/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/klinikpsk.canberkgelir/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/905411367213" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
   </div>
-
-  <a href="https://wa.me/905411367213" class="whatsapp" title="WhatsApp'tan yaz">💬</a>
 </body>
 </html>
